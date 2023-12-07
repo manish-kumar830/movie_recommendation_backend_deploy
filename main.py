@@ -26,16 +26,16 @@ app.add_middleware(
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR,'model')
 
-# df_url  = "https://c27b-2402-8100-216d-248d-fca2-ac83-bd37-459d.ngrok-free.app/model/movies_dataframe.pkl"
-# model_url  = "https://c27b-2402-8100-216d-248d-fca2-ac83-bd37-459d.ngrok-free.app/model/movies_dataframe.pkl"
+df_url  = "https://3f71-2402-8100-2169-d14d-fccb-e966-c696-812a.ngrok-free.app/model/movies_dataframe.pkl"
+model_url  = "https://3f71-2402-8100-2169-d14d-fccb-e966-c696-812a.ngrok-free.app/model/movies_similarity_model.pkl"
 
 
-# with open(os.path.join(MODEL_DIR,'movies_dataframe.pkl'),'wb') as f:
-#    f.write(requests.get(df_url).content)
+with open(os.path.join(MODEL_DIR,'movies_dataframe.pkl'),'wb') as f:
+   f.write(requests.get(df_url).content)
 
 
-# with open(os.path.join(MODEL_DIR,'movies_similarity_model.pkl'),'wb') as f:
-#    f.write(requests.get(model_url).content)
+with open(os.path.join(MODEL_DIR,'movies_similarity_model.pkl'),'wb') as f:
+   f.write(requests.get(model_url).content)
 
 
 movies_df = pd.DataFrame(pickle.load(open(os.path.join(MODEL_DIR,'movies_dataframe.pkl'),"rb")))
