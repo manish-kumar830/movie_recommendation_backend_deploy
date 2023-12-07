@@ -26,8 +26,8 @@ app.add_middleware(
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR,'model')
 
-df_url  = "https://3f71-2402-8100-2169-d14d-fccb-e966-c696-812a.ngrok-free.app/model/movies_dataframe.pkl"
-model_url  = "https://3f71-2402-8100-2169-d14d-fccb-e966-c696-812a.ngrok-free.app/model/movies_similarity_model.pkl"
+df_url  = "https://69c3-117-220-163-42.ngrok-free.app/model/movies_dataframe.pkl"
+model_url  = "https://69c3-117-220-163-42.ngrok-free.app/model/movies_similarity_model.pkl"
 
 
 with open(os.path.join(MODEL_DIR,'movies_dataframe.pkl'),'wb') as f:
