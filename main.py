@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, 'model')
 
 df_url  = "https://model98989.000webhostapp.com/model/movies_dataframe.pkl"
-model_url  = "https://model98989.000webhostapp.com/model/movies_dataframe.pkl"
+model_url  = "https://model98989.000webhostapp.com/model/movies_similarity_model.pkl"
 
 
 with open(os.path.join(MODEL_DIR,'movies_dataframe.pkl'),'wb') as f:
