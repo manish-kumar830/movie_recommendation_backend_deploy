@@ -18,6 +18,17 @@ def after_request(response):
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, 'model')
 
+df_url  = "https://model98989.000webhostapp.com/model/movies_dataframe.pkl"
+model_url  = "https://model98989.000webhostapp.com/model/movies_dataframe.pkl"
+
+
+with open(os.path.join(MODEL_DIR,'movies_dataframe.pkl'),'wb') as f:
+   f.write(requests.get(df_url).content)
+
+
+with open(os.path.join(MODEL_DIR,'movies_similarity_model.pkl'),'wb') as f:
+   f.write(requests.get(model_url).content)
+
 # Load movies dataframe and similarity model
 movies_df = pd.DataFrame(pickle.load(open(os.path.join(MODEL_DIR, 'movies_dataframe.pkl'), "rb")))
 movie_similarity = pickle.load(open(os.path.join(MODEL_DIR, 'movies_similarity_model.pkl'), "rb"))
